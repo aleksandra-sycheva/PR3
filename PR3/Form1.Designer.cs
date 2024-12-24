@@ -30,23 +30,49 @@
         {
             panel1 = new Panel();
             panel2 = new Panel();
+            label1 = new Label();
+            label2 = new Label();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.Dock = DockStyle.Top;
+            panel1.Controls.Add(label1);
+            panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(866, 275);
+            panel1.Size = new Size(429, 550);
             panel1.TabIndex = 0;
             // 
             // panel2
             // 
-            panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 274);
+            panel2.Controls.Add(label2);
+            panel2.Dock = DockStyle.Right;
+            panel2.Location = new Point(427, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(866, 276);
+            panel2.Size = new Size(439, 550);
             panel2.TabIndex = 1;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label1.Location = new Point(12, 20);
+            label1.Name = "label1";
+            label1.Size = new Size(156, 23);
+            label1.TabIndex = 0;
+            label1.Text = "Типы продукции";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label2.Location = new Point(24, 20);
+            label2.Name = "label2";
+            label2.Size = new Size(152, 23);
+            label2.TabIndex = 0;
+            label2.Text = "Типы партнеров";
             // 
             // Form1
             // 
@@ -58,12 +84,18 @@
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panel1;
+        private Label label1;
         private Panel panel2;
+        private Label label2;
     }
 }
