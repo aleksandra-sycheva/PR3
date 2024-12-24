@@ -14,7 +14,15 @@ namespace PR3
                 var list1 = db.TypeOfPartners.ToList();
                 var list2 = db.TypeOfProducts.ToList();
 
-                foreach (TypeOfProducts item in list1) {
+                foreach (TypeOfProduct item in list2)
+                {
+                    TypesOfProducts.Text += $"{item.Id}. {item.TypeOfProduct1}\n";
+                }
+                foreach (TypeOfPartner item in list1)
+                {
+                    TypeOfPartners.Text += $"{item.Id}. {item.TypeOfPartner1}\n";
+                }
+
             }
         }
     }

@@ -29,8 +29,10 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            panel2 = new Panel();
+            TypesOfProducts = new Label();
             label1 = new Label();
+            panel2 = new Panel();
+            TypeOfPartners = new Label();
             label2 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -38,6 +40,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(TypesOfProducts);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
@@ -45,14 +48,14 @@
             panel1.Size = new Size(429, 550);
             panel1.TabIndex = 0;
             // 
-            // panel2
+            // TypesOfProducts
             // 
-            panel2.Controls.Add(label2);
-            panel2.Dock = DockStyle.Right;
-            panel2.Location = new Point(427, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(439, 550);
-            panel2.TabIndex = 1;
+            TypesOfProducts.AutoSize = true;
+            TypesOfProducts.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            TypesOfProducts.Location = new Point(12, 82);
+            TypesOfProducts.Name = "TypesOfProducts";
+            TypesOfProducts.Size = new Size(0, 23);
+            TypesOfProducts.TabIndex = 1;
             // 
             // label1
             // 
@@ -64,11 +67,30 @@
             label1.TabIndex = 0;
             label1.Text = "Типы продукции";
             // 
+            // panel2
+            // 
+            panel2.Controls.Add(TypeOfPartners);
+            panel2.Controls.Add(label2);
+            panel2.Dock = DockStyle.Right;
+            panel2.Location = new Point(427, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(439, 550);
+            panel2.TabIndex = 1;
+            // 
+            // TypeOfPartners
+            // 
+            TypeOfPartners.AutoSize = true;
+            TypeOfPartners.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            TypeOfPartners.Location = new Point(24, 82);
+            TypeOfPartners.Name = "TypeOfPartners";
+            TypeOfPartners.Size = new Size(0, 23);
+            TypeOfPartners.TabIndex = 1;
+            // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label2.Location = new Point(24, 20);
+            label2.Location = new Point(8, 20);
             label2.Name = "label2";
             label2.Size = new Size(152, 23);
             label2.TabIndex = 0;
@@ -97,5 +119,7 @@
         private Label label1;
         private Panel panel2;
         private Label label2;
+        private Label TypesOfProducts;
+        private Label TypeOfPartners;
     }
 }
